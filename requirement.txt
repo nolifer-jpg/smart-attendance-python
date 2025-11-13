@@ -1,0 +1,10 @@
+opencv-python
+face_recognition
+dlib
+numpy
+pandas
+Pillow
+python-dotenv
+PyYAML
+pytest
+yagmail
