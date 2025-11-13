@@ -1,0 +1,8 @@
+match_threshold: 0.6
+cooldown_seconds: 30
+frame_skip: 2
+
+paths:
+  db: "data/attendance.db"
+  encodings: "data/models/encodings.pkl"
+  unknowns: "data/unknowns/"
