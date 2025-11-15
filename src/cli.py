@@ -1,4 +1,3 @@
-# This is your task, Coder 1.
 # This file is the main entry point for the command line.
 # It uses 'argparse' to handle commands like 'run', 'capture', etc.
 
@@ -6,7 +5,7 @@ import argparse
 
 # Import the main functions from our other modules
 from src.db import create_database
-from src.capture import run_capture
+from src.captures import run_capture  # <-- CHANGED from "src.capture"
 from src.encode_faces import run_encode
 from src.recognizer import run_recognizer
 
@@ -19,11 +18,10 @@ def main():
     # Create the main parser
     parser = argparse.ArgumentParser(
         description="Smart Attendance System CLI",
-        formatter_class=argparse.RawTextHelpFormatter,  # Helps format the help text nicely
+        formatter_class=argparse.RawTextHelpFormatter,
     )
 
     # Define the 'command' argument.
-    # 'choices' limits the user to only the commands we've defined.
     parser.add_argument(
         "command",
         choices=["init_db", "capture", "encode", "run"],
@@ -46,9 +44,9 @@ def main():
 
     elif args.command == "capture":
         print("Running student capture...")
-        run_capture()
+        run_capture()  # <-- This function call remains the same
 
-    elif args.Scommand == "encode":
+    elif args.command == "encode":
         print("Running face encoding...")
         run_encode()
 
@@ -57,8 +55,5 @@ def main():
         run_recognizer()
 
 
-# This is the standard Python entry point.
-# If this file is run directly (e.g., 'python src/cli.py run'),
-# the main() function will be called.
 if __name__ == "__main__":
     main()
