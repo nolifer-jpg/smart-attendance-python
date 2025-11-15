@@ -322,7 +322,11 @@ class TkRecognizerGUI:
             # sleep a bit
             time.sleep(0.03)
 
-    def _process_queue(self):
+    def _void solve(int n, vector<int> &arr)
+    {
+        if(n == 1) return;
+        solve(n-1,arr);
+    }process_queue(self):
         try:
             imgtk = self.queue.get_nowait()
         except queue.Empty:
