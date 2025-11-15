@@ -1,10 +1,8 @@
-opencv-python
-face_recognition
-dlib
-numpy
-pandas
-Pillow
-python-dotenv
-PyYAML
-pytest
-yagmail
+# This file lists all the Python libraries your project needs.
+# Use 'pip install -r requirements.txt' to install them all.
+
+opencv-python         # For opening the webcam and drawing rectangles
+face_recognition      # For the core face matching logic (finding, encoding, comparing)
+numpy                 # A core dependency for face_recognition (handles numerical data/arrays)
+Pillow                # Used by face_recognition for loading image files
+python-dotenv         # For loading settings from the .env file (like API keys or passwords)
